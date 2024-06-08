@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
-import axios from 'axios';
-import { useEffect } from 'react';
-import Spinner from './components/Spinner';
-import useGif from './Hooks/Hooks';
+import useGif from '../Hooks/useGif';
+import Spinner from './Spinner';
 
-
-const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
 const Tag = () => {
   const [tag, setTag] = useState('car');
@@ -20,7 +16,7 @@ const Tag = () => {
       <h1 className='mt-[15px] text-2xl underline uppercase font-bold'> Random {tag} Gif</h1>
 
     {
-        loading ? (<Spinner/>) : (<img src= {gif} width="450" />)
+        loading ? (<Spinner />) : (<img src= {gif} width="450" />)
     }
 
       <input 

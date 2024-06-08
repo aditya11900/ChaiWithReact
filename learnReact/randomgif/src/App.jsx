@@ -1,6 +1,6 @@
 import React from "react";
-import Random from "./components/Random/Random";
-import Tag from "./components/Tag/Tag";
+import Random from "./components/Random";
+import Tag from "./components/Tag";
 
 export default function App() {
   return (
