@@ -10,7 +10,7 @@ function App() {
     <AppContextProvider>
       <div className='min-h-screen flex flex-col'>
         <Header />
-        <main className='flex-grow container mx-auto p-4'>
+        <main className='flex-grow container mx-auto p-4 overflow-auto'>
           <Blog />
         </main>
         <footer className='border-t py-4'>
