@@ -4,21 +4,19 @@ import Header from './components/Header';
 import Blog from './components/Blog';
 import Pagination from './components/Pagination';
 import AppContextProvider from './context/AppContextProvider';
-import { useContext } from 'react';
-import { useEffect } from 'react';
-import { AppContext } from './context/AppContext';
-
-
 
 function App() {
-  
   return (
     <AppContextProvider>
-      
-        <Blog />
+      <div className='min-h-screen flex flex-col'>
         <Header />
-        <Pagination />
-
+        <main className='flex-grow container mx-auto p-4'>
+          <Blog />
+        </main>
+        <footer className='border-t py-4'>
+          <Pagination />
+        </footer>
+      </div>
     </AppContextProvider>
   );
 }

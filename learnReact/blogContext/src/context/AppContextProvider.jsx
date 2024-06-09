@@ -1,6 +1,6 @@
 // AppContextProvider.jsx
-import React, { createContext, useState, useEffect } from 'react';
-import { AppContext } from './AppContext';
+import React, { useState, useEffect } from 'react';
+import AppContext from './AppContext';
 
 const baseUrl = "https://codehelp-apis.vercel.app/api/get-blogs";
 
@@ -35,7 +35,7 @@ const AppContextProvider = ({ children }) => {
     setPage(page);
   }
 
-  const value = {
+  const values = {
     posts,
     loading,
     page,
@@ -45,7 +45,7 @@ const AppContextProvider = ({ children }) => {
   };
 
   return (
-    <AppContext.Provider value={value}>
+    <AppContext.Provider value={values}>
       {children}
     </AppContext.Provider>
   );
