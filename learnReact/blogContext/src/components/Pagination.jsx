@@ -5,7 +5,7 @@ function Pagination() {
   const { page, handlePageChange, totalPages } = useContext(AppContext);
 
   return (
-    <div className='w-full flex justify-center items-center gap-4 mt-4'>
+    <div className='w-full fixed bottom-0 left-0 bg-white shadow-md flex justify-center items-center gap-4 py-4'>
       {page > 1 && (
         <button 
           className='rounded-md bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 transition duration-200 ease-in-out transform hover:scale-105'

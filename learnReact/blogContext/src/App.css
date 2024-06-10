@@ -1,0 +1,47 @@
+/* App.css
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  #root {
+    height: 100%;
+  }
+  
+  .min-h-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .mb-16 {
+    margin-bottom: 4rem;
+  }
+  
+  .overflow-auto {
+    overflow: auto;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+  }
+   */
