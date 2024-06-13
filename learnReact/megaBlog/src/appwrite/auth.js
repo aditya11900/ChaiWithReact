@@ -21,19 +21,19 @@ export class AuthService{
         }
     }catch(error){
         console.error(error);
+        return false;
     }
 }
     async login({email, password}){
         try{
-            return await this.account.createSession(email,password);
-            
+            return await this.account.createEmailSession(email,password);   
         }catch(error){
-            console.error(error);
+            throw error;
         }
     }
  async getCurrentUser(){
     try{
-return await this.account.get();
+         return await this.account.get();
     }catch(error){
         console.error(error);
     }

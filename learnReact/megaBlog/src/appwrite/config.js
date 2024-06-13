@@ -1,8 +1,8 @@
 import conf from '../conf/conf.js'
-import {Client, Account,ID, Storage,Query } from 'appwrite';
+import {Client, Databases,ID, Storage,Query } from 'appwrite';
 
 
-export class Services{
+export class Service{
 
     client = new Client();
     databases;
@@ -23,19 +23,19 @@ export class Services{
                 slug,
                 {
                     title,
-                    content,featuredImage,
+                    content,
+                    featuredImage,
                     status,
                     userId,
                 }
             )
         }catch(error){
-            console.log("Appwrite serive:: createPost::error",error)
-            return false;
+            console.log("Appwrite serive:: createPost::error",error);
 
         }
 
     }
- async updatePost(slug,{title,content,featuredImage,status,userId}) {
+ async updatePost(slug, {title,content,featuredImage,status}) {
     try{
         return await this.databases.updateDocument(
             conf.appwriteDatabaseId,
@@ -88,11 +88,7 @@ try{
     return await this.databases.listDocuments(
         conf.appwriteDatabaseId,
             conf.appwriteCollectionId,
-            [
-                queries,
-                
-            ]
-
+                queries,               
     )
 }catch(error){
     console.log(error);
@@ -128,19 +124,13 @@ try{
         }
     }
  getFilePreview(fileId){
-        try{
-            return this.bucket.getFilePreview(
-                conf.appwriteBucketId,
-                fileId
-            )
-        }
-        catch(error){
-            console.log(error)
-            return false
-        }
-    }
+    return this.bucket.getFilePreview(
+        conf.appwriteBucketId,
+        fileId
+    )
+ }
 
 }
 
-const service = new Services();
+const service = new Service();
 export default service
