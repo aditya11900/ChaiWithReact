@@ -1,0 +1,85 @@
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Example font family */
+    line-height: 1.6;
+    background-color: #f3f4f6; /* Example background color */
+    color: #333; /* Example text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Links */
+a {
+    color: #3498db; /* Example link color */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #2980b9; /* Example link hover color */
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2ecc71; /* Example button background color */
+    color: #fff; /* Example button text color */
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #27ae60; /* Example button hover background color */
+}
+
+/* Input fields */
+.input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #3498db; /* Example input focus color */
+    outline: none;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Responsive utility */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+}
